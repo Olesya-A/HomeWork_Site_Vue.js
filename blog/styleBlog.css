@@ -150,6 +150,109 @@ a {
 .news {
   margin-bottom: 200px;
 }
+.news__header {
+  color: #292f36;
+  font-family: "DM Serif Display", serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.news__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 51px;
+}
+.news__content_item {
+  height: 521px;
+  width: 382px;
+  padding: 21px;
+  border-radius: 62px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+  background-color: #fff;
+  position: relative;
+}
+.news__content_item_img {
+  margin-bottom: 12px;
+}
+.news__content_item_img img {
+  border-radius: 45px 45px 0px 0px;
+}
+.news__content_item_label {
+  position: absolute;
+  top: 249px;
+  left: 41px;
+  width: 124px;
+  height: 41px;
+  border-radius: 8px 8px 8px 0px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news__content_item_label_text {
+  text-align: center;
+  color: #4d5053;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+.news__content_item_txtcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.news__content_item_txtcontent .txtcontent_header {
+  width: 285px;
+  color: #292f36;
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+}
+.news__content_item_txtcontent .wrapper {
+  display: flex;
+  width: 340px;
+  align-items: center;
+  justify-content: space-between;
+}
+.news__content_item_txtcontent .wrapper .txtcontent_text {
+  color: #4d5053;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+.news__content_item_txtcontent .wrapper .arrow:hover {
+  cursor: pointer;
+}
+.news__content_item_txtcontent .wrapper .arrow:hover circle {
+  fill: #fff;
+}
+.news__content_item:hover {
+  background-color: #f4f0ec;
+  cursor: pointer;
+}
+.news__content_item:hover svg circle {
+  fill: #fff;
+}
+.news__pagination {
+  width: 268px;
+}
 
 .footer {
   height: 272px;
