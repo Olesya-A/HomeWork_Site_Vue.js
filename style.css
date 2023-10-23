@@ -343,11 +343,11 @@ a {
 .blog__content .middle_item {
   background: #f4f0ec;
 }
-.blog__content-item:hover {
+.blog__content_item:hover {
   background-color: #e7e7e7;
   cursor: pointer;
 }
-.blog__content-item:hover svg circle {
+.blog__content_item:hover svg circle {
   fill: #fff;
 }
 
