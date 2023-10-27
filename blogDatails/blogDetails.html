@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styleBlogDetails.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header center">
+        <a class="header__left" href="main.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+          >
+            <path
+              d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+              fill="#CDA274"
+            />
+          </svg>
+          <h3 class="header__left_title">Interno</h3>
+        </a>
+        <nav class="header__right">
+          <a href="#" class="header__right_nav">Home</a>
+          <a href="#" class="header__right_nav">Project</a>
+          <a href="#" class="header__right_nav">Blog</a>
+        </nav>
+      </header>
+      <div class="banner center"></div>
+      <div class="blog center">
+        <div class="blog__details"></div>
+        <div class="blog__sidebar">
+          <h3 class="blog__sidebar_header">Tags</h3>
+          <div class="blog__sidebar_tags">
+            <button
+              class="blog__sidebar_tags_button"
+              v-for="item in tags"
+              :key="item.id"
+            >
+              {{item.tagName}}
+            </button>
+          </div>
+        </div>
+      </div>
+      <footer class="footer center">
+        <div class="footer__link">
+          <a class="footer__link_logo" href="main.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+            >
+              <path
+                d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+                fill="#CDA274"
+              />
+            </svg>
+            <h3 class="footer__link_logo_title">Interno</h3>
+          </a>
+          <p class="footer__link_text">
+            It is a long established fact that a reader will be distracted
+            lookings.
+          </p>
+          <div class="footer__link_icons">
+            <a href="#"
+              ><img src="../image/footer_icon_1.svg" alt="twitter"
+            /></a>
+            <a href="#"><img src="../image/footer_icon_2.svg" alt="insta" /></a>
+          </div>
+        </div>
+        <div class="footer__pages">
+          <h3 class="footer__pages_header">Pages</h3>
+          <a class="footer__pages_item">Home</a>
+          <a class="footer__pages_item">Project</a>
+          <a class="footer__pages_item">Blog</a>
+        </div>
+        <div class="footer__contacts">
+          <h3 class="footer__contacts_header">Contact</h3>
+          <div class="footer__contacts_wrapper">
+            <p class="footer__contacts_text">
+              55 East Birchwood Ave. Brooklyn, New York 11201
+            </p>
+            <p class="footer__contacts_text">contact@interno.com</p>
+            <p class="footer__contacts_text">(123) 456 - 7890</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const App = {
+        data() {
+          return {
+            tags: [
+              {
+                id: 1,
+                tagName: "Kitchen",
+              },
+              {
+                id: 2,
+                tagName: "Bedroom",
+              },
+              {
+                id: 3,
+                tagName: "Building",
+              },
+              {
+                id: 4,
+                tagName: "Architecture",
+              },
+              {
+                id: 5,
+                tagName: "Kitchen Planning",
+              },
+              {
+                id: 6,
+                tagName: "Bedroom",
+              },
+            ],
+          };
+        },
+        methods: {},
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
