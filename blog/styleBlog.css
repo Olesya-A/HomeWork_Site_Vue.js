@@ -56,8 +56,9 @@ a {
 
 .banner {
   height: 356px;
-  background-image: url(../image/blog_banner.jpg);
+  background-image: url(../image/blog_banner.png);
   background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   justify-content: center;
   align-items: end;
