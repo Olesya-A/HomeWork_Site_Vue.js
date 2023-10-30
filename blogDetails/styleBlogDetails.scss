@@ -1,0 +1,335 @@
+$widthSite: 1200px;
+$fontTitles: "DM Serif Display", serif;
+$fontText: "Jost", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding-left: calc(50% - $widthSite / 2);
+  padding-right: calc(50% - $widthSite / 2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 53px;
+  margin-bottom: 57px;
+
+  &__left {
+    width: 177px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_title {
+      color: #292f36;
+      font-family: $fontTitles;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+    }
+  }
+  &__right {
+    width: 243px;
+    display: flex;
+    justify-content: space-between;
+
+    &_nav {
+      color: #292f36;
+      text-align: center;
+      font-family: $fontText;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+    }
+  }
+}
+
+.banner {
+  height: 351px;
+  background-image: url(../image/blog_details_banner.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 200px;
+}
+
+.blog {
+  margin-bottom: 96px;
+  display: flex;
+  gap: 52px;
+
+  &__details {
+    width: 799px;
+
+    &_article {
+      &_header {
+        color: #292f36;
+        font-family: $fontTitles;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 1px;
+        margin-bottom: 21px;
+      }
+
+      &_image1 {
+        height: 539px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+        margin-bottom: 46px;
+      }
+
+      &_image2 {
+        height: 365px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50px;
+        margin-bottom: 35px;
+      }
+
+      &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        color: #4d5053;
+        font-family: $fontText;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+        margin-bottom: 48px;
+      }
+
+      &_text {
+        color: #4d5053;
+        font-family: $fontText;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.22px;
+        margin-bottom: 35px;
+      }
+
+      &_slogan {
+        display: flex;
+        padding: 57px 227px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px;
+        background: #f4f0ec;
+        margin-bottom: 27px;
+
+        &_header {
+          width: 345px;
+          color: #cda274;
+          text-align: center;
+          font-family: $fontTitles;
+          font-size: 25px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 125%;
+        }
+      }
+
+      &_ol {
+        counter-reset: myCounter;
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+
+      &_li {
+        position: relative;
+        padding: 0 0 0 20px;
+        list-style: none;
+        color: #4d5053;
+        font-family: $fontText;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.22px;
+        margin-bottom: 32px;
+      }
+
+      &_li:before {
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        color: #cda274;
+        font-family: $fontTitles;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: 0.4px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+
+  &__sidebar {
+    &_header {
+      color: #292f36;
+      font-family: $fontTitles;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+    }
+
+    &_tags {
+      width: 345px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 11px;
+
+      &_button {
+        padding: 9px 30px;
+        border-radius: 10px;
+        background: #f4f0ec;
+        border: #f4f0ec;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+      }
+
+      &_button:hover {
+        background: #292f36;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 272px;
+  margin-bottom: 134px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__link {
+    width: 393px;
+    display: flex;
+    flex-direction: column;
+
+    &_logo {
+      width: 177px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+
+      &_title {
+        color: #292f36;
+        font-family: $fontTitles;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+      }
+    }
+
+    &_text {
+      color: #4d5053;
+      font-family: $fontText;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 0.22px;
+      margin-bottom: 31px;
+    }
+
+    &_icons {
+      display: flex;
+      width: 225px;
+      align-items: center;
+      gap: 54px;
+    }
+  }
+
+  &__pages {
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+
+    &_header {
+      color: #292f36;
+      font-family: $fontTitles;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+      margin-bottom: 9px;
+    }
+
+    &_item {
+      color: #4d5053;
+      font-family: $fontText;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 300%;
+      letter-spacing: 0.22px;
+    }
+  }
+
+  &__contacts {
+    width: 258px;
+
+    &_header {
+      color: #292f36;
+      font-family: $fontTitles;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+      margin-bottom: 26px;
+    }
+
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: flex-end;
+    }
+
+    &_text {
+      color: #4d5053;
+      font-family: $fontText;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 0.22px;
+    }
+  }
+}
